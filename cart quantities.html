@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="cartQuantity()">Show Quantity</button>
+    <button onclick="cartQuantity(1)">add to cart</button>
+    <button onclick="cartQuantity(2)">+2</button>
+    <button onclick="cartQuantity(3)">+3</button>
+    <button onclick="cartQuantity(4)">+4</button>
+    <button onclick="cartQuantity(5)">+5</button>
+    <button onclick="cartQuantity(-1)">Remove to Cart</button>
+    <button onclick="cartQuantity(-2)">-2</button>
+    <button onclick="cartQuantity(-3)">-3</button>
+
+
+
+    <p id="quantity-display"></p>
+
+
+    <script>
+  
+      let quantity = 0;
+
+      function cartQuantity(change = 0){
+        quantity += change;
+
+        if ( quantity < 0 ) {
+          quantity = 0;
+        }
+
+        document.getElementById("quantity-display").innerHTML = `Cart Quantity: ${quantity}`;
+      }
+
+      cartQuantity();
+    
+
+
+
+    </script>
+  </body>
+
+
+
+</html>
